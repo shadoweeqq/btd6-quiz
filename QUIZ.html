@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTD6 Quiz</title>
+    <link rel="icon" type="image/x-icon" href="zdj/favicon.ico">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="zaladuj()">
+    <div class="flex">
+        <div id="quiz">
+            <div id="numer-pytania">1/10</div><br>
+            <div id="pytanie"></div>
+            <div class="zdjecie"><img src="zdj/map1.avif" id="zdjecie"></div>
+            <input type="button" value="A" class="answer" id="answer" onclick="sprawdzOdpowiedz(0)"><br>
+            <input type="button" value="B" class="answer" id="answer" onclick="sprawdzOdpowiedz(1)"><br>
+            <input type="button" value="C" class="answer" id="answer" onclick="sprawdzOdpowiedz(2)"><br>
+            <input type="button" value="D" class="answer" id="answer" onclick="sprawdzOdpowiedz(3)"><br>
+            <div class="wynik" id="wynik">wynik</div>
+            <input type="button" value="Następne Pytanie" id="next-question" onclick="nastepnePytanie()">
+            <div id="timer-bar-border">
+                <div id="timer-bar"></div>
+            </div>
+        </div>
+        <div id="koniec">
+            <h1>Wynik</h1><br>
+            <p id="koniec-punkty">10/10</p>
+            <div id="bar-border">
+                <div id="bar"></div>
+            </div>
+            <p id="koniec-poprawne"></p>
+            <input type="button" value="Spróbuj ponownie" onclick="location.reload()">
+        </div>
+    </div>
+
+</body>
+
+</html>
